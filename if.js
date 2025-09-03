@@ -1,6 +1,6 @@
 // 1
 
-let num = 0
+let num = -1
 if (num > 0) {
     console.log("Positive");
 } else if (num < 0) {
@@ -11,30 +11,23 @@ if (num > 0) {
 
 // 2
 
-let score = 59;
-let grade = '';
+let score = 90;
+let grade = score >= 90 ? "A" :
+            score >= 80 ? "B" :
+            score >= 70 ? "C" :
+            score >= 60 ? "D" : "F";
 
-if (score >= 90) {
-  grade = "A";
-} else if (score >= 80) {
-  grade = "B";
-} else if (score >= 70) {
-  grade = "C";
-} else if (score >= 60) {
-  grade = "D";
-} else {
-  grade = "F";
-}
 console.log("Grade: " + grade);
-
 
 // 3
 
 let skills = ["HTML", "CSS", "Javascript", "React"];
+let hasJS = skills.includes("Javascript");
+let hasReact = skills.includes("React");
 
-if (skills.includes("Javascript") && skills.includes("React")) {
+if (hasJS && hasReact) {
   console.log("Pass!");
-} else if (skills.includes("Javascript") || skills.includes("React")) {
+} else if (hasJS || hasReact) {
   console.log("Preliminary");
 } else {
   console.log("Fail");
